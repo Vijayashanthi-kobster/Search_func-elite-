@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.website.Search_execution">
+        <methods>
+          <include name="Brand_Price"/>
+          <include name="Sort_Brand"/>
+          <include name="Brand_Sort"/>
+          <include name="Sort_Price"/>
+          <include name="Price_Brand"/>
+          <include name="Price_Sort"/>
+          <include name="ALLfiltercases"/>
+          <include name="Searchcases"/>
+          <include name="login"/>
+        </methods>
+      </class> <!-- com.website.Search_execution -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
