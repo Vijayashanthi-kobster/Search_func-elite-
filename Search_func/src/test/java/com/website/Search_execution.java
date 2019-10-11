@@ -2,7 +2,6 @@ package com.website;
 
 import java.awt.AWTException;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
@@ -234,9 +233,3 @@ public void Searchcases() throws Exception
 	
 }
 
-/*
-	 * Elitelogin elite2=new Elitelogin(); elite2.beforeTest(); elite2.loginpage();
-	 * elite2.search_bar(); elite2.search_filter(); elite2.supplier_quote();
-	 * elite2.afterTest();
-	 */
-	
