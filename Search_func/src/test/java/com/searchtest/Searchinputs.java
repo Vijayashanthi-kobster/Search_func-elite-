@@ -1,6 +1,7 @@
 package com.searchtest;
 
 import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 
 import java.io.File;
@@ -60,31 +61,45 @@ public class Searchinputs {
 			
 	        driver.findElement(By.xpath("//*[@id=\"sticky\"]/div[3]/div[4]/div/div")).click();
 	               Thread.sleep(2000);
-            JavascriptExecutor jse = (JavascriptExecutor)driver;
-            for (int second = 0;; second++) {
-               if(second >=60){
+           
+	               
+	               JavascriptExecutor jse = (JavascriptExecutor)driver;
+            for (int second = 0;; second++)
+            {
+               if(second >=60)
+               {
                    break;
                }
     		  jse.executeScript("window.scrollTo(0, document.body.scrollHeight)");
     		  Thread.sleep(1000);
            }
            
-            boolean keyword = driver.getPageSource().contains(cell.getStringCellValue());
-    	    if (keyword == true)
-    	    {
-    	     System.out.println("System displaying only relevant data");
-    	    }
-    	    else
-    	    {
-    	     System.out.println("System displaying IRRELEVANT data ");
-    	    }
-            
-    	    List<WebElement> list = driver.findElements(By.className("sp-product-container"));
-    	    // ((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", list);
+        List<WebElement> name = driver.findElements(By.className("sp-name"));
+       	 for (WebElement result:name) 
+       	 {
+             System.out.println(result.getText());
+             System.out.println(result.getText().indexOf(cell.getStringCellValue())!=-1? true: false);
+        
+
+       	 }
+
+          
+           
+			/*
+			 * boolean keyword = driver.getPageSource().contains(cell.getStringCellValue());
+			 * if (keyword == true) {
+			 * System.out.println("System displaying only relevant data"); } else {
+			 * System.out.println("System displaying IRRELEVANT data "); }
+			 * 
+		
+			 */ 
+	     System.out.println("*************************************************************");
+       	 List<WebElement> list = driver.findElements(By.className("sp-product-container"));
     	     int itemsCount = list.size();
     	     System.out.println("Number of products present in a page :" +itemsCount);
     	     
-    	    
+    	     System.out.println("*************************************************************");
+    
 			Thread.sleep(2000);
 			driver.findElement(By.xpath("//*[@id=\"sticky\"]/div[3]/div[4]/div/input")).clear();
 

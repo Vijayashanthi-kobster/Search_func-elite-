@@ -206,9 +206,8 @@ public void Searchcases() throws Exception
 		  elite.sort_low2high();
 		  elite.low2high_result();
 		  elite.Brand_selection();
-	  
-	  elite.Brand_selection(); 
-	  elite.totalcount_product(); 
+	      elite.brandresult();
+	      elite.totalcount_product(); 
 	  System.out.println("##################################################################"); 
 	  }
 	  

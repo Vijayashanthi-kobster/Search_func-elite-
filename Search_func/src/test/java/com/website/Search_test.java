@@ -240,9 +240,9 @@ public void price_filter() throws InterruptedException, AWTException
 	Thread.sleep(3000);
 	System.out.println("PRICE FILTER CASE---------------");
 	WebElement slider=driver.findElement(pricefilter);
-    Actions action = new Actions(driver);
+  //  Actions action = new Actions(driver);
 
-    action .clickAndHold(slider).moveByOffset(200,0).release().perform();  
+    //action .clickAndHold(slider).moveByOffset(200,0).release().perform();  
 
     for (int i = 1; i <=200 ; i++) {
         slider.sendKeys(Keys.ARROW_LEFT);
